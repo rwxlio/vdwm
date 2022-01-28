@@ -207,7 +207,7 @@ tile(Monitor *m)
 	if (n == 1)
 		bw = 0;
 	else
-		bw = bw;
+		bw = borderpx;
 
 	sx = mx = m->wx + ov;
 	sy = my = m->wy + oh;
