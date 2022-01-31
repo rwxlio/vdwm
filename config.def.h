@@ -3,10 +3,10 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 16;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 16;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 24;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 16;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 18;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 18;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 26;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 26;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
@@ -15,9 +15,10 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 58;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "monospace:pixelsize=36:antialias=true",
-					"feather:antialias=true" };
+static const int user_bh            = 62;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const char *fonts[]          = { "Agave:pixelsize=36:antialias=true",
+					"Material Design Icons Desktop=40:antialias=true",
+					"feather:pixelsize=34:antialias=true" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -32,7 +33,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = {"", "", "", "", "", ""};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -45,20 +46,20 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 #include "vanitygaps.c"
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
-	{ "|M|",      centeredmaster },
-	{ "D[]",      deck },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "",      tile },    /* first entry is default */
+	{ "",      monocle },
+	{ "",      centeredmaster },
+	{ "",      deck },
+	{ "",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },    /* no layout function means floating behavior */
 };
 
