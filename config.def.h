@@ -17,9 +17,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 62;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Agave:pixelsize=36:antialias=true",
-					"Material Design Icons Desktop=40:antialias=true",
+					"Agave Nerd Font:pixelsize=32:antialias=true",
 					"feather:pixelsize=34:antialias=true" };
-static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -33,7 +32,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", ""};
+static const char *tags[] = {"", "", "", "", "", ""};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -76,7 +75,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-h", "62",  NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
